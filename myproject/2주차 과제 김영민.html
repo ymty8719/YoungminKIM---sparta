@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스파르타코딩클럽 | 로그인페이지</title>
+  <style>
+    .img {
+      width: 350px;
+      height: 150px;
+      background-image: url('data:image/jpeg;base64,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');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      ​ border-radius: 10px;
+      padding-top: 40px;
+    }
+
+    ​ .wrap {
+      margin: 10px auto;
+      width: 300px;
+    }
+  </style>
+  </style>
+  ​
+  </style>
+
+  <script>
+
+    $(document).ready(function () {
+      alert('로딩 완료')
+      function q1() {
+        $('#names-q1').empty();
+        $.ajax({
+          type: "GET",
+          url: "https://api.manana.kr/exchange/rate.json",
+          data: {},
+          success: function (response) {
+            let rows = response["money"]["row"];
+            for (let i = 0; i < rows.length; i++) {
+              let number = (money[i]["rate"]);
+      let name = (money[i]["name"]);
+      let litag = '<li>$(name) : $(number)<li/>';
+      $('#names-q1').append(litag)
+            }
+          }
+        })
+      }
+    });
+
+    if (((typeof someVariable != "undefined") && (typeof someVariable.valueOf() == "string")) && (someVariable.length > 0)) {
+...
+}
+
+    function hey() {
+      alert('주문이 완료되었습니다');
+    }
+  </script>
+  ​
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="img"><br><br><br><br><br><br><br>
+      <h2 class="mytitle">상품제목 </h2>
+      가격 : 1000원/개<br>
+      몰디브 바다를 모티브로 만든 부드러운 비누.
+      <div class="mytitle small-font">
+        ​
+        <h2 class="mytitle">주문하기 </h2>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">주문자 성함 : </label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=>
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div> <br>
+          ​
+          <div class="form-group">
+            <label for="exampleInputPassword1">수량 : </label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder=>
+          </div><br>
+          ​
+          <div class="form-group">
+            <label for="exampleInputPassword1"> 주소 : </label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder=>
+          </div><br>
+          ​
+          <div class="form-group">
+            <label for="exampleInputPassword1"> 전화번호 : </label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder=>
+          </div><br>
+          <button onclick="hey()" type="button" class="btn btn-primary">주문</button>
+      </div>
+
+      <div class="question-box">
+        <ul id="names-q1">
+            <li>KRW=X : 1,</li>
+            <li>USDKRW=X : 1232.19</li>
+            <li>JPYKRW=X : 11.49892214227722,</li>
+        </ul>
+    </div>
+      ​
+
+</body>
+
+</html>
