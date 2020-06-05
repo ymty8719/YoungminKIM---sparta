@@ -12,7 +12,7 @@ def home():
 
 ## API 역할을 하는 부분
 @app.route('/sell', methods=['POST'])
-def write_things():
+def sell_things():
 
     name = request.form['name']
     call = request.form['call'']
@@ -30,7 +30,7 @@ def write_things():
 
 @app.route('/sell', methods=['GET'])
 def read_sell():
-    sell_things = list(db.books.find({},{'_id' : False})) 
+    sell_things = list(db.sells.find({},{'_id' : False})) 
 
     return jsonify({'result':'success', 'msg': '이 요청은 GET!', 'data' : sell-things})
 
