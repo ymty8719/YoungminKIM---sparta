@@ -82,7 +82,7 @@
             });
         }
 
-        function appendTableRow(reviewData){
+        function appendTableRow(sellData){
             let trTemplate =`
             <tr>
                 <td>${reviewData['name']}</td>
@@ -149,13 +149,13 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">주문자 이름</span>
                 </div>
-                <input type="text" class="form-control" id="title" aria-describedby="basic-addon3">
+                <input type="text" class="form-control" id="name" aria-describedby="basic-addon3">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">전화번호</span>
                 </div>
-                <input type="text" class="form-control" id="author" aria-describedby="basic-addon3">
+                <input type="text" class="form-control" id="number" aria-describedby="basic-addon3">
             </div>
 
             <div class="form-group">
@@ -174,7 +174,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">주소</span>
                     </div>
-                    <textarea class="form-control" aria-describedby="basic-addon3" name="bookReview" id="review" cols="30"
+                    <textarea class="form-control" aria-describedby="basic-addon3" name="living house" id="house" cols="30"
                         rows="2" placeholder="50자까지 입력할 수 있습니다." onkeyup="is_long(this)"></textarea>
                 </div>
 
@@ -187,9 +187,9 @@
                 <thead>
                     <tr>
                         <th scope="col">주문자 이름</th>
-                        <th scope="col">주소</th>
-                        <th scope="col">수량</th>
                         <th scope="col">전화번호</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">주소</th>
                     </tr>
                 </thead>
                 <tbody id="orders-box">
